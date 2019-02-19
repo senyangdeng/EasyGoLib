@@ -39,7 +39,7 @@ func Init() (err error) {
 			err = fmt.Errorf("Port[%d] In Use", port)
 			return
 		}
-		args := []string{"--port", strconv.Itoa(port), "--protected-mode", "no"}
+		args := []string{"--port", strconv.Itoa(port)}
 		if auth != "" {
 			args = append(args, "--requirepass", auth)
 		}
